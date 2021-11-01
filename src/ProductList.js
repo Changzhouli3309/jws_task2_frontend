@@ -26,7 +26,6 @@ export const ProductList = ({ user, setisLogin }) => {
         const res = await UserService.logout(user.token)
         if (res) {
             setisLogin(false);
-            console.log("log out: " + user.token)
         } else {
             alert("logout failed")
         }

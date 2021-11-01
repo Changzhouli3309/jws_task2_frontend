@@ -22,7 +22,6 @@ export const Account = ({ setUser, setisLogin }) => {
                 token: token
             })
             setisLogin(true)
-            console.log(token)
         }
       };
 
