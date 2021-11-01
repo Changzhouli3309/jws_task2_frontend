@@ -19,7 +19,6 @@ export const ProductList = ({ user, setisLogin }) => {
     const getList = async () => {
         const data = await ProductService.getAllProduct(user.token)
         setProductList(data);
-        console.log(data)
     }
 
     const logout = async () => {
