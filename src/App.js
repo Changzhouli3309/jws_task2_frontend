@@ -13,7 +13,7 @@ function App() {
   const [isLogin, setisLogin] = useState(false);
 
   return (<>
-    <h1>App</h1>
+    <h1>Product App</h1>
     {
       !isLogin ?
         <Account setUser={setUser} setisLogin={setisLogin} />

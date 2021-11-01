@@ -14,6 +14,7 @@ export const Account = ({ setUser, setisLogin }) => {
 
     const login = async () => {
         const token = await UserService.login(input);
+        console.log(token)
         if (token === "error") {
             alert("login failed")
         } else {

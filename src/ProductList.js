@@ -33,9 +33,10 @@ export const ProductList = ({ user, setisLogin }) => {
 
     return (
         <>
-            <h2>welcome {user.username} </h2>
+            <h2>Welcome {user.username} </h2>
             <input type="button" value="Logout" onClick={logout} />
             <NewProduct token={user.token} getUppdate={getUppdate}/>
+            <br/>
             <h2>ProductList</h2>
             <div>
                 {productList.map((product) => (
@@ -47,9 +48,9 @@ export const ProductList = ({ user, setisLogin }) => {
                         }}
                         key={product._id}
                     >
-                        <p style={{ fontWeight: "bold" }}>{product.name}</p>
-                        <p>{product.price} kr</p>
-                        <p>{product.description}</p>
+                        <p style={{ fontWeight: "bold" }}>Name: {product.name}</p>
+                        <p>Price: {product.price} kr</p>
+                        <p>Description: {product.description}</p>
                     </div>
                 ))}
             </div>

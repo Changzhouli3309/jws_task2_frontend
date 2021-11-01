@@ -1,7 +1,7 @@
 import { useState } from "react"
 import ProductService from "./ProductService";
 
-export const NewProduct = (token, getUppdate) => {
+export const NewProduct = ({token, getUppdate}) => {
 
     const [product, setProduct] = useState({
         name: "",
@@ -14,6 +14,7 @@ export const NewProduct = (token, getUppdate) => {
     };
 
     const create = async() =>{
+        console.log(token)
         const res = await ProductService.newProduct(token,product);
         if(res){
             getUppdate()
